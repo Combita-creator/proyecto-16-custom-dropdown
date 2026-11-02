@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown - Proyecto 16</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+
+<body>
+
+    <div class="dropdown-container">
+        <!-- Botón principal del desplegable -->
+        <button class="dropdown-button" id="dropdownBtn" aria-expanded="false">
+            <span class="selected-text" id="selectedText">Select an Item</span>
+            <span class="arrow" id="dropdownArrow">∨</span>
+        </button>
+
+        <!-- Menú desplegable con la lista de opciones -->
+        <ul class="dropdown-menu" id="dropdownMenu">
+            <li class="dropdown-item" data-value="First Item">
+                <span>First Item</span>
+                <span class="check-icon">✓</span>
+            </li>
+            <li class="dropdown-item" data-value="Second Item">
+                <span>Second Item</span>
+                <span class="check-icon">✓</span>
+            </li>
+            <li class="dropdown-item" data-value="Third Item">
+                <span>Third Item</span>
+                <span class="check-icon">✓</span>
+            </li>
+            <li class="dropdown-item" data-value="Fourth Item">
+                <span>Fourth Item</span>
+                <span class="check-icon">✓</span>
+            </li>
+            <li class="dropdown-item" data-value="Fifth Item">
+                <span>Fifth Item</span>
+                <span class="check-icon">✓</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

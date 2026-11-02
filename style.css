@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.dropdown-container {
+    position: relative;
+    width: 280px;
+}
+
+/* Botón principal (Estado por defecto y cerrado) */
+.dropdown-button {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: border-radius 0.2s ease;
+}
+
+.arrow {
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    border-radius: 12px;
+    list-style: none;
+    display: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* Opciones individuales */
+.dropdown-item {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Marca de verificación para la opción seleccionada */
+.check-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.dropdown-item.selected .check-icon {
+    display: inline-block;
+}
+
+/* Estado ABIERTO */
+.dropdown-container.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-container.open .arrow {
+    transform: rotate(180deg);
+}
